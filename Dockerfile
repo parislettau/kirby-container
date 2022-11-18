@@ -34,7 +34,6 @@ COPY default.conf /etc/apache2/sites-available/000-default.conf
 
 # Remove default content (existing index.html)
 RUN rm /var/www/html/*
-RUN mkdir /var/www/html
 
 # Clone the Kirby Starterkit
 # RUN git clone --depth 1 https://github.com/parislettau/mass.memoreview-docker.git /var/www/html
