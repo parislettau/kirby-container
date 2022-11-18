@@ -2,7 +2,7 @@
 FROM ubuntu:latest
 
 # Set timezone environment variable
-ENV TZ=Europe/Berlin
+ENV TZ=Australia/Melbourne
 
 # Set geographic area using above variable
 # This is necessary, otherwise building the image doesn't work
