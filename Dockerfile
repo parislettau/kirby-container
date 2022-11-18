@@ -29,6 +29,12 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
     php-zip && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 
+# install imagemagic
+RUN t=$(mktemp) && \
+    wget 'https://dist.1-2.dev/imei.sh' -qO "$t" && \
+    bash "$t" && \
+    rm "$t"
+
 # Copy virtual host configuration from current path onto existing 000-default.conf
 COPY default.conf /etc/apache2/sites-available/000-default.conf
 
