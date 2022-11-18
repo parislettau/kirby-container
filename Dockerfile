@@ -27,7 +27,8 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
     php-mbstring \
     php-xml \
     php-zip && \
-    apt-get clean && rm -rf /var/lib/apt/lists/*
+    apt-get clean && rm -rf /var/lib/apt/lists/* && \
+    apt-get install wget
 
 # install imagemagic
 RUN t=$(mktemp) && \
