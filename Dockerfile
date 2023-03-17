@@ -51,7 +51,8 @@ RUN rm /var/www/html/*
 RUN chown -R www-data:www-data /var/www/html/
 
 # Activate Apache modules headers & rewrite
-RUN a2enmod headers rewrite
+RUN a2enmod headers rewrite \
+    sudo a2enmod rewrite
 
 # Tell container to listen to port 80 at runtime
 EXPOSE 80
