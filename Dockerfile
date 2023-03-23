@@ -51,11 +51,15 @@ RUN rm /var/www/html/*
 RUN chown -R www-data:www-data /var/www/html/
 
 # Activate Apache modules headers & rewrite
+<<<<<<< HEAD
 RUN a2enmod headers rewrite 
 # sudo a2enmod rewrite
 
 RUN cp /usr/local/etc/php/php.ini-development /usr/local/etc/php/php.ini && \
     sed -i 's/upload_max_filesize = 20M' /usr/local/etc/php/php.ini && 
+=======
+RUN a2enmod headers rewrite
+>>>>>>> parent of bce470d (Update Dockerfile)
 
 # Tell container to listen to port 80 at runtime
 EXPOSE 80
