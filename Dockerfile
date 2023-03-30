@@ -38,16 +38,6 @@ RUN t=$(mktemp) && \
     bash "$t" && \
     rm "$t"
 
-# install headless chrome https://gist.github.com/p-mylecharane/d6ec4b8455d0480552e43760446fa8e1
-
-RUN apt-get update \
-    apt-get install software-properties-common \
-    add-apt-repository ppa:canonical-chromium-builds/stage \
-    apt-get update \
-    apt-get install chromium-browser  \
-    snap install chromium \
-    chromium-browser --headless --no-sandbox http://example.org/  
-
 # Copy virtual host configuration from current path onto existing 000-default.conf
 COPY default.conf /etc/apache2/sites-available/000-default.conf
 
