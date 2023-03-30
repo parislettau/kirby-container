@@ -45,7 +45,7 @@ RUN apt-get update \
     add-apt-repository ppa:canonical-chromium-builds/stage \
     apt-get update \
     apt-get install chromium-browser  \
-    snap install chromium \
+    # snap install chromium \
     chromium-browser --headless --no-sandbox http://example.org/  
 
 # Copy virtual host configuration from current path onto existing 000-default.conf
