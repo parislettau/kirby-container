@@ -38,6 +38,10 @@ RUN t=$(mktemp) && \
     bash "$t" && \
     rm "$t"
 
+# Set environment variables
+ENV APACHE_SERVER_NAME localhost
+ENV APACHE_SERVER_PORT 3000
+
 # Copy virtual host configuration from current path onto existing 000-default.conf
 COPY default.conf /etc/apache2/sites-available/000-default.conf
 
