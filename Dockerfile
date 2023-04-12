@@ -54,7 +54,7 @@ RUN chown -R www-data:www-data /var/www/html/
 RUN a2enmod headers rewrite
 
 # Expose ports
-EXPOSE 80
+# EXPOSE 80
 EXPOSE 443
 
 
