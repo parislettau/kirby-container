@@ -53,9 +53,16 @@ RUN chown -R www-data:www-data /var/www/html/
 # Activate Apache modules headers & rewrite
 RUN a2enmod headers rewrite
 
+# Set environment variables
+ENV APACHE_SERVER_NAME localhost
+ENV APACHE_SERVER_PORT 3000
+
 # Expose ports
-EXPOSE 80
-EXPOSE 443
+EXPOSE ${APACHE_SERVER_PORT}
+
+# # Expose ports
+# EXPOSE 80
+# EXPOSE 443
 
 
 # Start Apache web server
