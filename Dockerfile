@@ -38,10 +38,6 @@ RUN t=$(mktemp) && \
     bash "$t" && \
     rm "$t"
 
-# Set environment variables
-ENV APACHE_SERVER_NAME localhost
-ENV APACHE_SERVER_PORT 3000
-
 # Copy virtual host configuration from current path onto existing 000-default.conf
 COPY default.conf /etc/apache2/sites-available/000-default.conf
 
@@ -58,7 +54,7 @@ RUN chown -R www-data:www-data /var/www/html/
 RUN a2enmod headers rewrite
 
 # Expose ports
-# EXPOSE 80
+EXPOSE 80
 EXPOSE 443
 
 
