@@ -29,9 +29,6 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
     php-zip && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 
-# To enable mod_proxy module, you can add the following line to your Dockerfile:
-RUN a2enmod proxy proxy_http
-
 # install wget
 RUN apt-get update && apt-get install wget
 
