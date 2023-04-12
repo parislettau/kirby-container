@@ -27,7 +27,6 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
     php-mbstring \
     php-xml \
     php-zip && \
-    ssl \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # install wget
