@@ -63,4 +63,4 @@ EXPOSE 8000
 
 # Start Apache web server
 # CMD [ "/usr/sbin/apache2ctl", "-DFOREGROUND" ]
-CMD ["php", "-S", "0.0.0.0:8000", "-t", "/var/www/html"]
+CMD ["php", "-S", "8000:8000", "-t", "/var/www/html"]
