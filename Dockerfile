@@ -36,11 +36,11 @@ RUN a2enmod proxy proxy_http
 # install wget
 RUN apt-get update && apt-get install wget
 
-# install imagemagic
-RUN t=$(mktemp) && \
-    wget 'https://dist.1-2.dev/imei.sh' -qO "$t" && \
-    bash "$t" && \
-    rm "$t"
+# # install imagemagic
+# RUN t=$(mktemp) && \
+#     wget 'https://dist.1-2.dev/imei.sh' -qO "$t" && \
+#     bash "$t" && \
+#     rm "$t"
 
 # Copy virtual host configuration from current path onto existing 000-default.conf
 COPY default.conf /etc/apache2/sites-available/000-default.conf
