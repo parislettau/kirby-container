@@ -59,7 +59,7 @@ RUN a2enmod headers rewrite
 # Expose ports
 EXPOSE 80
 EXPOSE 443
-
+EXPOSE 8000
 
 # Start Apache web server
 CMD [ "/usr/sbin/apache2ctl", "-DFOREGROUND" ]
