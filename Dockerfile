@@ -62,5 +62,4 @@ EXPOSE 443
 EXPOSE 8000
 
 # Start Apache web server
-# CMD [ "/usr/sbin/apache2ctl", "-DFOREGROUND" ]
-CMD ["php", "-S", "apps-test.9jgqd6.easypanel.host:8000", "-t", "/var/www/html"]
+CMD [ "/usr/sbin/apache2ctl", "-DFOREGROUND" ]
